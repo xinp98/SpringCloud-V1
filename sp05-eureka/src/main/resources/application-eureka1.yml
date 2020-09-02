@@ -1,0 +1,14 @@
+#application-eureka1.yml
+# 只配置跟主配置不同的
+eureka:
+  instance:
+    hostname: eureka1   #集群中的hostname来区分服务器
+  client:
+    register-with-eureka: true #单台服务器不向自身注册
+    fetch-registry: true  #单台服务器不向自身拉取注册信息
+    service-url:
+      defaultZone: http://eureka2:2002/eureka
+
+
+
+
